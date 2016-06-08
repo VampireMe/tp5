@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="{$Think.DOMAIN}/css/common.css" rel="stylesheet">
+</head>
+
+<!--[CDATA[YII-BLOCK-BODY-BEGIN]]--><body>
+<div id="top"></div>
+<div id="header">
+    <div class="logo">
+        <a href="{$Think.DOMAIN}">
+            <img src="{$Think.DOMAIN}/images/logo.jpg" alt="">
+        </a>
+    </div>
+    <div class="navigation">
+        <a href="{$Think.DOMAIN}">首页</a>
+
+        <!-- 分类信息 Start -->
+        {foreach $categories as $category}
+            <a href="{$Think.DOMAIN}/category/{$category.cid}.html">{$category.cname}</a>
+        {/foreach}
+        <!-- 分类信息 End -->
+    </div>
+</div>
+
+<div id="main">
+
+    <div class="content">
+        {__CONTENT__}
+    </div>
+
+    <!-- 主体内容部分 End -->
+
+    <!-- 右侧文章列表 Start -->
+    <div class="sidebar">
+        <div class="item">
+            <h2>文章标题</h2>
+            <ul class="flink">
+                <li><a href="http://yii2test.adv.com/article/42.html">20151228测试2</a></li>
+                <li><a href="http://yii2test.adv.com/article/41.html">20151228测试</a></li>
+                <li><a href="http://yii2test.adv.com/article/28.html">蹲下来抱抱自己</a></li>
+                <li><a href="http://yii2test.adv.com/article/40.html">后盾网激情澎湃的篮球赛</a></li>
+                <li><a href="http://yii2test.adv.com/article/38.html">惜别，亲爱的友情</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 右侧文章列表 End -->
+
+</div>
+
+<div id="footer">
+    <div class="bgbar"></div>
+    <div class="bottom">
+        <div class="pos">
+            <div class="copyright">© Copyright 2011-2013 www.houdunwang 后盾网</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

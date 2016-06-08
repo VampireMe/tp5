@@ -1,0 +1,52 @@
+<title>文章首页</title>
+<link href="{$Think.DOMAIN}/css/index.css" rel="stylesheet">
+
+<div class="list">
+    <div class="title">
+        <h2>最新文章..</h2>
+    </div>
+    <ul>
+        {if (isset($latestArticles) && !empty($latestArticles))}
+            {foreach $latestArticles as $latestArticle}
+                <li>
+                    <div class="post-image">
+                            <span>
+                                <a href="{$Think.DOMAIN}/article/{$latestArticle.aid}.html">
+                                <img src="{$Think.DOMAIN}/images/{$latestArticle.thumb}" width=""></a>
+                            </span>
+                    </div>
+                    <div class="post-content">
+                        <a href="{$Think.DOMAIN}/article/{$latestArticle.aid}.html">
+                            <h3>{$latestArticle.title}</h3></a>
+                        <p>{$latestArticle.info}</p>
+                    </div>
+                </li>
+            {/foreach}
+        {/if}
+    </ul>
+</div>
+
+<div class="list">
+    <div class="title">
+        <h2>热门文章..</h2>
+    </div>
+    <ul>
+        {if (isset($hotArticles) && !empty($hotArticles))}
+        {foreach $hotArticles as $hotArticle}
+        <li>
+            <div class="post-image">
+                <span>
+                    <a href="{$Think.DOMAIN}/article/{$hotArticle.aid}.html">
+                    <img src="{$Think.DOMAIN}/images/{$hotArticle.thumb}" width=""></a>
+                </span>
+            </div>
+            <div class="post-content">
+                <a href="{$Think.DOMAIN}/article/{$hotArticle.aid}.html">
+                    <h3>{$hotArticle.title}</h3></a>
+                <p>{$hotArticle.info}</p>
+            </div>
+        </li>
+        {/foreach}
+        {/if}
+    </ul>
+</div>
