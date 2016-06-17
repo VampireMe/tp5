@@ -1,0 +1,26 @@
+
+<title>{$title}</title>
+<link href="{$Think.DOMAIN}/css/category.css" rel="stylesheet">
+
+<div class="news">
+    {present name = "articles"}
+        {notempty name = "articles"}
+            {foreach $articles as $article}
+                <div class="newsList">
+                    <div class="newsImage">
+                        <a href="{$Think.DOMAIN}/article/{$article.aid}.html">
+                            <img src="{$Think.DOMAIN}/images/{$article.thumb}" width="">
+                        </a>
+                    </div>
+                    <div class="newsContent">
+                        <h3>
+                            <a href="{$Think.DOMAIN}/article/{$article.aid}.html">{$article.title}</a>
+                        </h3>
+                        <p>{$article.info}</p>
+                        <a href="{$Think.DOMAIN}/article/{$article.aid}.html" class="more">更多&gt;&gt;</a>
+                    </div>
+                </div>
+            {/foreach}
+        {/notempty}
+    {/present}
+</div>

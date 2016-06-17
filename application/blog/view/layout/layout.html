@@ -38,11 +38,11 @@
         <div class="item">
             <h2>文章标题</h2>
             <ul class="flink">
-                <li><a href="http://yii2test.adv.com/article/42.html">20151228测试2</a></li>
-                <li><a href="http://yii2test.adv.com/article/41.html">20151228测试</a></li>
-                <li><a href="http://yii2test.adv.com/article/28.html">蹲下来抱抱自己</a></li>
-                <li><a href="http://yii2test.adv.com/article/40.html">后盾网激情澎湃的篮球赛</a></li>
-                <li><a href="http://yii2test.adv.com/article/38.html">惜别，亲爱的友情</a></li>
+                {foreach $latest5 as $article}
+                <li>
+                    <a href="{$Think.DOMAIN}/article/{$article.aid}.html">{$article.title}</a>
+                </li>
+                {/foreach}
             </ul>
         </div>
     </div>
