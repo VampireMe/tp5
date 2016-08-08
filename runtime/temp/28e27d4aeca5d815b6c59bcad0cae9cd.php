@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:90:"D:\gaoqing\software\wamp\www\PHPStorm\tp5\public/../application/blog\view\index\index.html";i:1465376808;s:92:"D:\gaoqing\software\wamp\www\PHPStorm\tp5\public/../application/blog\view\layout\layout.html";i:1465357799;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:90:"D:\gaoqing\software\wamp\www\PHPStorm\tp5\public/../application/blog\view\index\index.html";i:1465376808;s:92:"D:\gaoqing\software\wamp\www\PHPStorm\tp5\public/../application/blog\view\layout\layout.html";i:1465715940;}*/ ?>
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -86,11 +86,11 @@
         <div class="item">
             <h2>文章标题</h2>
             <ul class="flink">
-                <li><a href="http://yii2test.adv.com/article/42.html">20151228测试2</a></li>
-                <li><a href="http://yii2test.adv.com/article/41.html">20151228测试</a></li>
-                <li><a href="http://yii2test.adv.com/article/28.html">蹲下来抱抱自己</a></li>
-                <li><a href="http://yii2test.adv.com/article/40.html">后盾网激情澎湃的篮球赛</a></li>
-                <li><a href="http://yii2test.adv.com/article/38.html">惜别，亲爱的友情</a></li>
+                <?php foreach($latest5 as $article): ?>
+                <li>
+                    <a href="<?php echo DOMAIN; ?>/article/<?php echo $article['aid']; ?>.html"><?php echo $article['title']; ?></a>
+                </li>
+                <?php endforeach; ?>
             </ul>
         </div>
     </div>
